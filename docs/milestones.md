@@ -4,7 +4,7 @@
 
 Para este **milestone interno** se pretende identificar las características necesarias de las asignaturas para afrontar el problema e implementar uno o varios módulos que permitan el almacenamiento de dichos datos.
   - **PMV**: implementación de un módulo capaz de preparar la estructura de datos para el almacenamiento de los datos de las asiganturas.
-  - **Viable**: si compila y está definido con las características típicas de una asignatura de un horario.
+  - **Viable**: estar definido con las características típicas de una asignatura de un horario siguiendo las buenas prácticas.
   - **HUs** relacionadas: H1
 
 ## [M1] Recopilación de datos web
