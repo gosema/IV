@@ -4,7 +4,7 @@ Este archivo contendrá las distintas historias de usuario planteadas para el de
 
 ## [HU1] Como estudiante de la UGR quiero saber que asignaturas mías son incompatibles en horario.
 
-A un usuario que se vaya a mtricular en la universidad y tenga que escoger asignaturas, le gustaría saber cuántas y cuáles de las que ha seleccionado coinciden en hora y por lo tanto no podría cursarlas a la vez.
+A un usuario que se vaya a matricular en la universidad y tenga que escoger asignaturas, le gustaría saber cuántas y cuáles de las que ha seleccionado coinciden en hora y por lo tanto no podría cursarlas a la vez.
 
 ## [HU2] Como estudiante de la UGR quiero ver a que subgrupos apuntarme para evitar incompatibilidad.
 

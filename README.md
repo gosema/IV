@@ -7,3 +7,10 @@ Soy un estudiante de la universidad de Granada y he tenido que estar un día ent
 ### [Ver archivo de configuración](config_git/documentacion.md)
 
 ### [Ver archivo de historias de usuario](docs/HU.md)
+
+Tras un estudio del proyecto y las necesidades que pueden presentar los usuarios de esta aplicación, se han escrito distintas historias de usuario. Cada historia de usuario consta de u problema individual que pertenece a un tipo de usuario y que dará paso a soluciones.
+
+### [Ver archivo de milestones](docs/milestones.md)
+
+Para presentar las soluciones al diseño del producto se han creado unos milestones a partir de las historias de usuario. Estos milestones representan los productos mínimamente viables para cumplir con el desarrollo ágil y dar valor al cliente.
+
