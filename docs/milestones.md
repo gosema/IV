@@ -2,17 +2,17 @@
 
 ## [M0] Módulo de datos
 
-Para este **milestone interno** se pretende identificar las características necesarias de las asignaturas para afrontar el problema e implementar uno o varios módulos que permitan el almacenamiento de dichos datos.
-  - **PMV**: implementación de un módulo capaz de preparar la estructura de datos para el almacenamiento de los datos de las asiganturas.
+Para este **milestone interno** se pretende identificar las características necesarias de las asignaturas para afrontar el problema e implementar uno o varios módulos que permitan tanto el almacenamiento como la gestión de dichos datos.
+  - **PMV**: implementación de un módulo capaz de definir y gestionar la estructura de datos para cumplir con las HU.
   - **Viable**: estar definido con las características típicas de una asignatura de un horario siguiendo las buenas prácticas.
-  - **HUs** relacionadas: H1
+  - **HUs** relacionadas: H1 H2 H3
 
 ## [M1] Recopilación de datos web
 
-El siguiente **milestone externo** consiste en la obtención y consulta de los datos disponibles en la web.
+El siguiente **milestone externo** consiste en disponer de un conjunto de datos obtenidos de la web.
   - **PMV**: Extractor de datos necesarios de la página web de asiganturas de la UGR.
   - **Viable**: si se observan los mismos datos en el programa que en la web y se produce de forma automática.
-  - **HUs** relacionadas: H1
+  - **HUs** relacionadas: H1 H2 H3
 
 ## [M2] Implementación de lógica de negocio 
 
