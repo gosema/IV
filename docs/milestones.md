@@ -16,7 +16,7 @@ El siguiente **milestone externo** consiste en disponer de un conjunto de datos 
 
 ## [M2] Implementación de lógica de negocio 
 
-Este **milestone externo** se encarga de la correcta implementación y desarrollo de código de la lógica de negocio inicial corresponidente a la HU.
+Este **milestone externo** se encarga de la correcta implementación y desarrollo de código de la lógica de negocio inicial corresponidente a detectar incompatibilidades en asignaturas con un mismo horario.
   - **PMV**: Algoritmo capaz de resolver las necesidades del cliente de planificación de asignaturas.
   - **Viable**: si compila y responde con una solución óptima o aproximada.
   - **HUs** relacionadas: H1 
