@@ -11,7 +11,7 @@ Para este **milestone interno** se pretende identificar las características nec
 
 El siguiente **milestone externo** consiste en disponer de un conjunto de datos obtenidos de la web.
   - **PMV**: Extractor de datos necesarios de la página web de asiganturas de la UGR.
-  - **Viable**: si se observan los mismos datos en el programa que en la web y se produce de forma automática.
+  - **Viable**: si se extraen automáticamente los datos de la web y se indexa en la estructura de datos con la misma información.
   - **HUs** relacionadas: H1 H2 H3
 
 ## [M2] Implementación de lógica de negocio 
