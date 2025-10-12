@@ -2,9 +2,9 @@
 
 ## [M0] Módulo de datos
 
-Para este **milestone interno** se pretende identificar las características necesarias de las asignaturas para afrontar el problema e implementar uno o varios módulos que permitan tanto el almacenamiento como la gestión de dichos datos.
+Este **milestone interno** agrupa las características necesarias de las asignaturas para afrontar los problemas recogidos en las HU siguiendo las buenas prácticas en uno o varios módulos.
   - **PMV**: implementación de un módulo capaz de definir y gestionar la estructura de datos para cumplir con las HU.
-  - **Viable**: estar definido con las características típicas de una asignatura de un horario siguiendo las buenas prácticas.
+  - **Viable**: estar definido con las características típicas de una asignatura de un horario siguiendo las buenas prácticas de iteracciones con issues y resueltas con commits.
   - **HUs** relacionadas: H1 H2 H3 
 
 ## [M1] Recopilación de datos web
