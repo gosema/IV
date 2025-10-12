@@ -14,7 +14,7 @@ A los usuarios les gustaría saber si pueden resolver la incompatibilidad horari
 
 Los alumnos de doble grado encuentran otros problemas a la hora de elegir las asignaturas de la matrícula. No saben si dos clases consecutivas que tienen será en distintos edificios o campus y no les dará tiempo a acudir. Aunque tengan compatibilidad horaria, no existe compatibildiad espacial. 
 
-## [HU4] Como estudiante de la UGR quiero ver mis asignaturas escogidas en un horario.
+## [HU4] Como estudiante de la UGR me encuentro confundido sin un horario específico para mí
 
-El estudiante que utilice este proyecto querrá ver la elección óptima de sus asignaturas organizadas en un horario, habiendo descartado las asignaturas que no podía cursar.
+Los estudiantes están cansados de buscarse la vida para hacerse su propio horario, tienen muchas asignaturas y no siempre quieren el horario propuesto por las escuelas. Tienen que cursar otras asignaturas distintas a la planificación de la carrera incial y esto origina problemas de compatibilidad.
 
