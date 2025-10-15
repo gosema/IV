@@ -6,7 +6,7 @@
   - **HUs relacionadas**: HU1
 
 
-## [M2] Implementación de lógica de negocio 
+## [M1] Implementación de lógica de negocio 
   - **PMV**: Código fuente encargado de implementar la lógica de negocio mediante la obtención de información de las asignaturas, siguiendo las buenas prácticas tomadas en el M0
   - **Viable**: si pasa los test para identificar si se poseen los datos que dan valor al producto del cliente y si se sigue el mismo buen proceso de desarrollo de código del milestone 0.
   - **HUs relacionadas**: HU1 
