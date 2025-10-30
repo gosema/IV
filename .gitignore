@@ -26,3 +26,6 @@ pnpm-debug.log*
 
 # Especifico de macOS
 .DS_Store
+
+# Archivo de la asignatura
+iv.yaml
