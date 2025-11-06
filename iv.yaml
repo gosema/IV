@@ -1,2 +1,5 @@
 lenguaje: TypeScript
 entidad: src/entidad.ts
+automatizar:
+  fichero: deno.json
+  orden: deno task
