@@ -1,28 +1,24 @@
-# Node modules
-/node_modules/
-
-# build info de TypeScript
-*.tsbuildinfo
-
-# Archivos de log de npm y logs en general
-npm-debug.log*
-pnpm-debug.log*
-*.log
-
-# Los .env 
-.env
-.env.*.local
-.env.local
-
-# pnpm store
-/.pnpm-store/
-
-# Especifico de npm
-/.npm
-
-# Especificos del IDE
-/.vscode-test/
-/.vscode/
-
-# Especifico de macOS
+# macOS settings file 
 .DS_Store
+
+# Contains all your dependencies
+node_modules
+
+# Replace as required with your build location
+/build
+
+# Deal with environment files
+.env
+.env.*
+
+# Visual Studio Code configuration
+.vscode/
+
+
+# npm and yarn debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# next.js
+.next
