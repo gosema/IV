@@ -25,8 +25,14 @@ También se ha tomado la elección de escoger entre varios gestores.
 - El gestor de dependencias escogido ha sido el incluido en Deno. [Justificación](docs/dependencias.md)
 - El gestor de tareas elegido ha sido Deno task. [Justificación](docs/tareas.md)
 
-### Tutorial
+### Comandos básicos
 
-Para facilitar al usuario utilizar el proyecto se ha creado el siguiente archivo a modo de tutorial con los comandos básicos y algunos parámetros interesantes del deno .json.
+  deno run main.tsm -> ejecuta el programa
+  deno task dev -> utiliza el gestor de tareas integrado en Deno (deno.json)
+  deno test -> ejecuta los test del proyecto (archivo_test.ts)
+  deno lint -> revisa el código fuente sin ejecutar en busca de posibles errores
+  deno task check -> comprueba la sintaxis y los tipos del archivo (entidad.ts)
+
+Para facilitar al usuario utilizar el proyecto se ha creado el siguiente archivo a modo de tutorial algunos parámetros interesantes de deno .json.
 [Tutorial](/docs/tutorial_denojson.md)
 
