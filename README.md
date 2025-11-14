@@ -31,7 +31,7 @@ También se ha tomado la elección de escoger entre varios gestores.
   deno task dev -> utiliza el gestor de tareas integrado en Deno (deno.json)
   deno test -> ejecuta los test del proyecto (archivo_test.ts)
   deno lint -> revisa el código fuente sin ejecutar en busca de posibles errores
-  deno task check -> comprueba la sintaxis y los tipos del archivo (entidad.ts)
+  deno check -> comprueba la sintaxis y los tipos de los archivos
 
 Para facilitar al usuario utilizar el proyecto se ha creado el siguiente archivo a modo de tutorial algunos parámetros interesantes de deno .json.
 [Tutorial](/docs/tutorial_denojson.md)
