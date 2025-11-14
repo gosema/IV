@@ -1,9 +1,6 @@
 {
   "tasks": {
-    "dev": "deno run --watch src/entidad.ts",
-    "check": "deno check src/entidad.ts",
-    "lint": "deno lint",
-    "test": "deno test"
+    "dev": "deno run --watch src/entidad.ts"
   },
   "lint": {
     "rules": {
