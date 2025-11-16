@@ -10,7 +10,7 @@ En el desarrollo con **TypeScript y Deno**, la elección del gestor de tareas ad
 
 ## Deno Task
 
-Es la opción nativa del runtime Deno, tiene una **sintaxis** simple y declarativa pero no programática. Destaca por su **integración con el entorno** que no requiere herramientas externas ni dependencias adicionales, ya que las tareas se definen directamente en el archivo `deno.json`. Esto favorece una configuración centralizada, segura y multiplataforma, reduciendo la complejidad técnica y facilitando la colaboración entre desarrolladores. Sobre la **dependencia de tareas** su principal limitación es que no permite establecer dependencias ni ejecutar lógica condicional, por lo que resulta menos adecuado para flujos muy complejos. Aun así, su integración directa con Deno y su bajo coste de mantenimiento lo convierten en una solución práctica y sostenible para la mayoría de proyectos.
+Es la opción nativa del runtime Deno, tiene una **sintaxis** simple pero no programática. Destaca por su **integración con el entorno** que no requiere herramientas externas ni dependencias adicionales, ya que las tareas se definen directamente en el archivo `deno.json`. Sobre la **dependencia de tareas** su principal limitación es que no permite establecer dependencias ni ejecutar lógica condicional, por lo que resulta menos adecuado para flujos muy complejos. Aun así, su integración directa con Deno y su bajo coste de mantenimiento lo convierten en una solución práctica y sostenible para la mayoría de proyectos.
 
 ## Make
 
