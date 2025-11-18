@@ -6,19 +6,29 @@ Estas tareas comunes incluyen: la ejecución de tests, el chequeo de sintaxis o 
 
 # Comparativa de Gestores de Tareas: Deno Task, Make y Drake
 
-En el desarrollo con **TypeScript y Deno**, la elección del gestor de tareas adecuado es fundamental para mantener un flujo de trabajo eficiente y reducir la deuda técnica. Existen tres alternativas principales que suelen considerarse: **Deno Task**, **Make** y **Drake**. Cada una ofrece un enfoque distinto y analizaremmos como atienden a las caracterísiticas que se buscan: una **sintaxis** de código sencilla, su correcta **integración con el entorno** y lo bien que gestiona la **dependencia de tareas**.
+Para la orquestación y automatización de tareas del proyecto (scripts de build, test, lint, etc.), evaluaré tres alternativas basándome en criterios técnicos objetivos.
+Compararé las opciones considerando la **portabilidad multiplataforma** (que funcione idénticamente en Windows/Linux/Mac), la necesidad de **dependencias externas** (si requiere instalar software adicional en el sistema) y la **barrera de entrada del lenguaje** utilizado para definir las tareas.
 
 ## Deno Task
 
-Es la opción nativa del runtime Deno, tiene una **sintaxis** simple pero no programática. Destaca por su **integración con el entorno** que no requiere herramientas externas ni dependencias adicionales, ya que las tareas se definen directamente en el archivo `deno.json`. Sobre la **dependencia de tareas** su principal limitación es que no permite establecer dependencias ni ejecutar lógica condicional, por lo que resulta menos adecuado para flujos muy complejos. Aun así, su integración directa con Deno y su bajo coste de mantenimiento lo convierten en una solución práctica y sostenible para la mayoría de proyectos.
+Es la herramienta de automatización integrada en el runtime de Deno y se configura dentro del deno.json. [Enlace a deno task](https://docs.deno.com/runtime/reference/cli/task/)
+Sobre la necesidad de **dependencias externas**, al ser una herramienta nativa no requiere ninguna instalación adicional (como requiere Make) ni la importación de librería de terceros (como requiere Drake).
+Su **portabilidad multiplataforma** es total, ya que implementa su propio intérprete de shell ligero multiplataforma en deno task.
+Para la **barrera de entrada del lenguaje** utiliza una sintaxis de comandos shell estándar, no hace falta aprender un DSL complejo o tener en cuenta reglas de tabulación estrictas.
 
 ## Make
 
-Es una herramienta clásica de automatización ampliamente utilizada en entornos UNIX. Su principal ventaja es la madurez y estabilidad que ofrece, además para la **dependencia de tareas** permite la definición de flujos de tareas complejos dependientes. Sin embargo, su **sintaxis** anticuada y dependiente del shell puede dificultar la portabilidad y el mantenimiento del código. Además, carece de **integración** con Deno o TypeScript, lo que genera redundancia y una posible acumulación de deuda técnica.
+Es una herramienta clásica de automatización ampliamente utilizada en entornos UNIX. [Enlace a Make](https://www.gnu.org/software/make/manual/make.html)
+Sobre la necesidad de **dependencias externas** es alta pero a diferencia de las herramientas integradas en el runtime, Make es un binario externo y no existe de forma nativa en Windows.
+Con respecto a la **portabilidad multiplataforma** es baja ya que Make delega a la ejecución de comandos al shell del SO, eso significa que comandos que funcionan en Linux pueden fallar en la consola estándar de Windows.
+Por último su **barrera de entrada al lenguaje** es alta, utiliza su propio lenguaje con una sintaxis estricta.
 
 ## Drake
 
-Representa una opción intermedia, ya que su **sintaxis** permite escribir las tareas en TypeScript y su **integración con el entorno** está diseñado específicamente para Deno. En cuanto a como maneja la **dependencia de tareas**, permite escribir tareas con lógica programática, dependencias y condiciones utilizando el propio lenguaje del proyecto, lo que mejora la legibilidad y coherencia técnica. No obstante, su configuración es más compleja, requiere permisos adicionales para su ejecución y cuenta con una comunidad más pequeña. En consecuencia, aunque ofrece mayor flexibilidad, puede incrementar la complejidad del proyecto si se emplea para tareas sencillas.
+Es una librería de terceros inspirada en Make, pero diseñada específicamente para Deno. [Enlace a drake](https://github.com/srackham/drake)
+Sobre la necesidad de **dependencias externas** no requiere instalar software a nivel de SO como en Make pero tampoco viene integrado en el runtime como deno task, requiere instalar una librería de terceros.
+Con respecto a la **portabilidad multiplataforma** es alta, al ejecutarse sobre el runtime de Deno hereda su capacidad multiplataforma.
+Por último su **barrera de entrada al lenguaje** es baja, sobre todo para desarrolladores de TypeScript (el lenguaje utilizado en el proyecto) ya que usa este mismo lenguaje, no hace falta aprender un DSL ni usar comandos de shell.
 
 ## Conclusión: Deno Task
 
