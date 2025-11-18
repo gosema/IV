@@ -12,7 +12,6 @@ Elegir correctamente el runtime es fundamental, ya que la forma en que este mane
 
 Para elegir un runtime específico en mi proyecto voy a considerar ciertos criterios que me servirán para comparar las opciones que se presentan y poder escoger la que mejor se adapte a mis necesidades. 
 Voy a considerar el **rendimiento** del runtime así como si contiene **herramientas integradas** (como gestores de paquetes, test runners, etc...),también que sea una herramienta con una **comunidad** amplia y sea estable (siga en uso y reciba actualizaciones).
-
 Actualmente, para proyectos escritos en **TypeScript**, existen tres runtimes principales que conviene analizar y comparar:
 
 ## Node.js
