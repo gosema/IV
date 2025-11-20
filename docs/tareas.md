@@ -23,7 +23,7 @@ Con respecto a la **portabilidad multiplataforma** es baja ya que Make delega a 
 
 ## Drake
 
-Es una librería de terceros inspirada en Make, pero diseñada específicamente para Deno. Cabe destacar que utilza TypeScript (lenguaje del proyecto) [Enlace a drake](https://github.com/srackham/drake).
+Es una librería de terceros inspirada en Make, pero diseñada específicamente para Deno.[Enlace a drake](https://github.com/srackham/drake).
 Sobre la necesidad de **dependencias externas** no requiere instalar software a nivel de SO como en Make pero tampoco viene integrado en el runtime como deno task, requiere instalar una librería de terceros.
 Con respecto a la **portabilidad multiplataforma** es alta, al ejecutarse sobre el runtime de Deno hereda su capacidad multiplataforma.
 
