@@ -11,16 +11,16 @@ Las herramientas a analizar serán estas cuatro:
 ## npm
 [Enlace a npm](https://docs.npmjs.com/)
 Node Package Manager, es el gestor de dependencias original y el que viene instalado por defecto en Node. [Enlace a npm](https://docs.npmjs.com/)
-No es una herramienta **integrada** con Deno, es una herramienta completamente externa que pertenece al ecosistema Node.js, se caracteriza por su tendencia a crear carpetas node_modules hinchadas
+No es una herramienta **integrada** con Deno, es una herramienta completamente externa que pertenece al ecosistema Node.js.
 
 ## pnpm
 [Enlace a pnpm](https://pnpm.io/)
-Al igual que npm, no es una herramienta **integrada** en Deno. Es una alternativa externa que pertenece al ecosistema de Node.js. Se caracteriza por su mejora de uso de espacio de la carpeta node_modules y redimiento con respecto a npm.
+Al igual que npm, no es una herramienta **integrada** en Deno. Es una alternativa externa que pertenece al ecosistema de Node.js.
 
 ## Yarn
 
 [Enlace a Yarn Berry](https://github.com/yarnpkg/berry)
-Está dividido en dos versiones muy diferentes: Classic y Berry con una filosofía totalmente distinta. Berry utiliza Pnp, mantiene las dependencias dentro de archivos .zip cacheados.
+Está dividido en dos versiones muy diferentes: Classic y Berry con una filosofía totalmente distinta.
 Al igual que npm y pnpm, no es una herramienta **integrada** en Deno. Es una herramienta externa que pertenece al ecosistema Node.js
 
 ## Utilizar la herramienta incluida en el runtime Deno
