@@ -4,9 +4,7 @@ Un gestor de dependencias es una herramienta de software que automatiza el proce
 
 ## Criterios de elección
 
-Para elegir el gestor de dependencias, evaluaré las opciones disponibles según varios criterios clave. Daré prioridad a las soluciones que sigan la filosofía del proyecto: **herramientas nativamente integradas** que no requieran componentes externos. No obstante, analizaré también las principales alternativas externas. El objetivo es no sesgar la decisión y estudiar objetivamente si ofrecen ventajas claras que justifiquen su uso.
-
-Las herramientas a analizar serán estas cuatro:
+Para elegir el gestor de dependencias, evaluaré las opciones disponibles según varios criterios clave. Daré prioridad a las soluciones que sigan la filosofía del proyecto: **herramientas nativamente integradas** que no requieran componentes externos. No obstante, analizaré también las principales alternativas externas. El objetivo es no sesgar la decisión y estudiar objetivamente si ofrecen ventajas claras que justifiquen su uso. Las herramientas a analizar serán estas cuatro:
 
 ## npm
 [Enlace a npm](https://docs.npmjs.com/)
