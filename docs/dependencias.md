@@ -4,37 +4,28 @@ Un gestor de dependencias es una herramienta de software que automatiza el proce
 
 ## Criterios de elección
 
-Para elegir el gestor de dependencias, evaluaré las opciones disponibles según varios criterios clave. Al igual que con el runtime, consideraré el tamaño de la **comunidad** y el **rendimiento** (tanto en instalación como en almacenamiento).
-
-Además, daré prioridad a las soluciones que sigan la filosofía del proyecto: **herramientas nativamente integradas** que no requieran componentes externos. No obstante, analizaré también las principales alternativas externas. El objetivo es no sesgar la decisión y estudiar objetivamente si ofrecen ventajas claras que justifiquen su uso.
+Para elegir el gestor de dependencias, evaluaré las opciones disponibles según varios criterios clave. Daré prioridad a las soluciones que sigan la filosofía del proyecto: **herramientas nativamente integradas** que no requieran componentes externos. No obstante, analizaré también las principales alternativas externas. El objetivo es no sesgar la decisión y estudiar objetivamente si ofrecen ventajas claras que justifiquen su uso.
 
 Las herramientas a analizar serán estas cuatro:
 
 ## npm
-
+[Enlace a npm](https://docs.npmjs.com/)
 Node Package Manager, es el gestor de dependencias original y el que viene instalado por defecto en Node. [Enlace a npm](https://docs.npmjs.com/)
-En cuánto a **rendimiento** su velocidad ha mejorado en sus versiones más modernas pero sigue por detrás con respecto a las otras herramientas. Sobre su almacenamiento es también el menos eficiente por su tendencia a crear carpetas node_modules hinchadas. Por último cuenta con el ecosistema de paquetes más grande y una **comunidad** masiva, estable y confiable.
-No es una herramienta **integrada** con Deno, es una herramienta completamente externa que pertenece al ecosistema Node.js.
+No es una herramienta **integrada** con Deno, es una herramienta completamente externa que pertenece al ecosistema Node.js, se caracteriza por su tendencia a crear carpetas node_modules hinchadas
 
 ## pnpm
-
-Performant npm se diseñó específicamente para solucionar los dos grandes problemas de **rendimiento** npm: la velocidad y el espacio en disco.
-Utiliza la carpeta node_modules de forma más eficiente ahorrando espacio. Aunque utiliza el mismo registro que npm, algunas herramientas más antiguas pueden no funcionar correctamente.
-En cuanto a la **comunidad**, ha ganado una adopción masiva en los últimos años y es mantenido activamente. Es considerado el estándar moderno en muchos proyectos de código abierto, por lo que su soporte y estabilidad son muy robustos.
-Al igual que npm, no es una herramienta **integrada** en Deno. Es una alternativa externa que pertenece al ecosistema de Node.js. [Enlace a pnpm](https://pnpm.io/)
+[Enlace a pnpm](https://pnpm.io/)
+Al igual que npm, no es una herramienta **integrada** en Deno. Es una alternativa externa que pertenece al ecosistema de Node.js. Se caracteriza por su mejora de uso de espacio de la carpeta node_modules y redimiento con respecto a npm.
 
 ## Yarn
 
-Fue creado por Facebook para solucionar los problemas de velocidad y fiabilidad que tenía npm en sus inicios. Está dividido en dos versiones muy diferentes: Classic y Berry con una filosofía totalmente distinta. [Enlace a Yarn Berry](https://github.com/yarnpkg/berry)
-Berry utiliza Pnp, mantiene las dependencias dentro de archivos .zip cacheados. Por lo que en **rendimiento** tiene instalaciones muy rápidas y un almacenamiento eficiente.
-En cuanto a su **comunidad**, se considera igual de maduro y estable para producción que npm.
+[Enlace a Yarn Berry](https://github.com/yarnpkg/berry)
+Está dividido en dos versiones muy diferentes: Classic y Berry con una filosofía totalmente distinta. Berry utiliza Pnp, mantiene las dependencias dentro de archivos .zip cacheados.
 Al igual que npm y pnpm, no es una herramienta **integrada** en Deno. Es una herramienta externa que pertenece al ecosistema Node.js
 
 ## Utilizar la herramienta incluida en el runtime Deno
 
-Es la única opción que cumple con el criterio de ser una herramienta nativa **integrada**, al ser parte del propio runtime elimina la necesidad de instalar o configurar gestores externos.
-En cuanto a **rendimiento** utiliza un caché global centralizado que le permite ahorrar espacio en disco comparado con npm (node_modules).
-Respecto a la **comunidad**, aunque es más pequeña que las de npm o Yarn, es muy técnica y activa.
+Es la única opción que cumple con el criterio de ser una herramienta nativa **integrada**, al ser parte del propio runtime elimina la necesidad de instalar o configurar gestores externos. Utiliza un caché global centralizado que le permite ahorrar espacio en disco comparado con npm (node_modules).
 
 ## Conclusión
 
