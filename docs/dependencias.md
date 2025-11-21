@@ -17,9 +17,8 @@ Al igual que npm, no es una herramienta **integrada** en Deno. Es una alternativ
 
 ## Yarn
 
-[Enlace a Yarn Berry](https://github.com/yarnpkg/berry)
-Está dividido en dos versiones muy diferentes: Classic y Berry con una filosofía totalmente distinta.
-Al igual que npm y pnpm, no es una herramienta **integrada** en Deno. Es una herramienta externa que pertenece al ecosistema Node.js
+[Enlace a Yarn](https://yarnpkg.com/)
+Es una gestor para el ecosistema Node que surge como alternativa de npm. Al igual que npm y pnpm, no es una herramienta **integrada** en Deno. Es una herramienta externa que pertenece al ecosistema Node.js
 
 ## Utilizar la herramienta incluida en el runtime Deno
 
