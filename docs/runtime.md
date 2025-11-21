@@ -6,8 +6,7 @@ Para empezar a crear la infraestructura de nuestro proyecto, debemos tener en cu
 
 Para elegir un runtime específico en mi proyecto voy a considerar ciertos criterios que me servirán para comparar las opciones que se presentan y poder escoger la que mejor se adapte a mis necesidades. 
 Voy a considerar el **rendimiento** del runtime según los benchmarks de [Enlace a Betterstack](https://betterstack.com/community/guides/scaling-nodejs/nodejs-vs-deno-vs-bun/), así como si contiene **herramientas integradas** (como gestores de paquetes, test runners, etc...) y si el runtime ofrece una **librería estándar** que evite depender de paquetes de terceros.
-
-Actualmente, para proyectos escritos en **TypeScript**, existen tres runtimes principales que conviene analizar y comparar:
+Actualmente, para proyectos escritos en **TypeScript**, existen estos runtimes que conviene analizar y comparar:
 
 ## Node.js
 
