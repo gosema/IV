@@ -14,13 +14,13 @@ Actualmente, para proyectos escritos en **TypeScript**, existen tres runtimes pr
 [Enlace a Node](https://nodejs.org/en)
 Su funcionamiento depende de gestores externos como npm, yarn o pnpm, es decir **no posee herramientas integradas**.
 A nivel de **rendimiento**, aunque sigue siendo robusto, suele ser más lento cuando se compara con alternativas más recientes como Deno y Bun.
-Sobre la **librería estándar** está contenida en el fichero node_modules, que aunque sea bastante completa a menudo requiere dependencias externas para utilidades modernas. 
+Sobre la **librería estándar** viene integrada en el ejecutable, pero es limitada para necesidades modernas lo que obliga a instalar paquetes de terceros mantenidos por la comunidad, con riesgos de seguridad o abandono.
 
 ## Deno
 
 [Enlace a Deno](https://deno.com/)
 Incluye un gestor de dependencias y tareas totalmente integrado. Además proporciona **herramientas integradas** (batteries-included) como `deno task`, test runner, linter y formatter. En cuanto a **rendimiento** es superior a Node.js, pero ligeramente por detrás de Bun en velocidad de ejecución pura.
-Sobre su **librería estándar**, es su gran diferenciador con respecto a las otras opciones pues posee una librería que garantiza herramientas básicas sin instalar paquetes de terceros.
+Sobre su **librería estándar**, es su gran diferenciador con respecto a las otras opciones pues posee una librería oficial que garantiza herramientas básicas sin instalar paquetes de terceros.
 
 ## Bun
 
