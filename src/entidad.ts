@@ -1,1 +1,0 @@
-// Clase que define la entidad
