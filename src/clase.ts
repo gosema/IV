@@ -1,11 +1,11 @@
 class Clase {
     grupo: string;
     dia: string;
-    semestre: string;
+    semestre: number;
     horario_inicio: string;
     horario_final: string;
 
-    constructor(grupo: string, dia: string, semestre: string, horario_inicio: string, horario_final: string) {
+    constructor(grupo: string, dia: string, semestre: number, horario_inicio: string, horario_final: string) {
         this.grupo = grupo;
         this.dia = dia;
         this.semestre = semestre;
