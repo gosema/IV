@@ -14,3 +14,6 @@ Tras un estudio del problema del usuario y las necesidades que pueden presentar,
 
 Para presentar las soluciones al diseño del producto se han creado unos milestones, que representan los productos mínimamente viables que habrá que cumplir ordenadamente para realizar el desarrollo ágil y dar valor al cliente.
 
+### Elección del lenguaje.
+Para el proyecto hemos acordado usar TypeScript como puede observarese en la [issue #7](https://github.com/gosema/IV/issues/7). Es una buena elección porque proporciona un sistema de tipos estático que mejora la robustez del código frente a JS, facilita el mantenimiento a largo plazo y permite estructurar proyectos de manera más clara y escalable.
+
