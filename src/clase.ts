@@ -6,10 +6,10 @@ class Clase {
     grupo: string;
     dia: DiaLectivo;
     semestre: Semestre;
-    horario_inicio: string;
-    horario_final: string;
+    horario_inicio: [number, number];
+    horario_final: [number, number];
 
-    constructor(grupo: string, dia: DiaLectivo, semestre: Semestre, horario_inicio: string, horario_final: string) {
+    constructor(grupo: string, dia: DiaLectivo, semestre: Semestre, horario_inicio: [number, number], horario_final: [number, number]) {
         this.grupo = grupo;
         this.dia = dia;
         this.semestre = semestre;
