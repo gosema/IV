@@ -35,4 +35,6 @@ También se ha tomado la elección de escoger entre varios gestores.
 
 Para facilitar al usuario utilizar el proyecto se ha creado el siguiente archivo a modo de tutorial algunos parámetros interesantes de deno .json.
 [Tutorial](/docs/tutorial_denojson.md)
+### Elección del lenguaje.
+Para el proyecto hemos acordado usar TypeScript como puede observarese en la [issue #7](https://github.com/gosema/IV/issues/7). Es una buena elección porque proporciona un sistema de tipos estático que mejora la robustez del código frente a JS, facilita el mantenimiento a largo plazo y permite estructurar proyectos de manera más clara y escalable.
 
