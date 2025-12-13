@@ -15,3 +15,17 @@ function obtenerTextoSemestreRaw(html: string): string {
     const contenido = matchSemestre[1] ? matchSemestre[1] : "";
     return contenido;
 }
+
+/**
+ * Responsabilidad: Reglas de Negocio y Validación.
+ * Convierte el texto "primero"/"segundo" al tipo 1|2.
+ * Lanza error si el valor no es el esperado.
+ */
+function parsearSemestre(texto: string): Semestre {
+    //Verificamos si vacio, null o undefined y se eliminan espacios y mayusculas
+    const textoLimpio = texto?.trim().toLowerCase();
+
+    if (textoLimpio === "primero") return 1;
+    if (textoLimpio === "segundo") return 2;
+
+}
