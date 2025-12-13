@@ -66,7 +66,7 @@ describe("Semestre - Tests", () => {
             expect(() => extraerSemestre(htmlSemestreInvalido))
                 .toThrow(ERRORES.SEMESTRE_NO_VALIDO);
         });
-        
+
         it("Debe lanzar error específico si la celda del semestre está vacía", () => {
             // HTML con estructura correcta, pero contenido vacio de semestre
             const htmlVacio = `
@@ -75,6 +75,12 @@ describe("Semestre - Tests", () => {
 
             expect(() => extraerSemestre(htmlVacio))
                 .toThrow(ERRORES.SEMESTRE_VACIO);
+        });
+
+        it("Debe lanzar error si el semestre aparece como dígito numérico ('1' o '2') en vez de texto", () => {
+            // Simulamos el caso prohibido
+            const htmlNumerico1 = `<table><tr><th>Semestre</th><td>1</td></tr></table>`;
+            expect(() => extraerSemestre(htmlNumerico1)).toThrow(ERRORES.SEMESTRE_NO_VALIDO);
         });
     });
 
