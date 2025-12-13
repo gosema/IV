@@ -2,6 +2,19 @@
 import { ERRORES } from "./errores.ts";
 import { Semestre } from "./clase.ts";
 
+
+
+/**
+     * Coordina la extracción y validación del semestre.
+*/
+export function extraerSemestre(html: string): Semestre {
+    // 1. Extraemos el string crudo del HTML
+    const textoRaw = obtenerTextoSemestreRaw(html);
+
+    // 2. Validamos y convertimos al tipo Semestre
+    return parsearSemestre(textoRaw);
+}
+
 /**
      * Responsabilidad: Búsqueda en el HTML (Scraping puro).
      * Busca la celda que contiene el texto del semestre.
