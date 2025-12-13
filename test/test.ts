@@ -42,4 +42,20 @@ describe("Semestre - Tests", () => {
 
     });
 
+    describe("Sad Path: Manejo de errores con HTML inválido", () => {
+
+        it("Debe lanzar error si no encuentra la tabla del semestre", () => {
+            // HTML sin la tabla de semestre
+            const htmlSinTabla = `
+                <link rel="canonical" href="https://www.ugr.es/estudiantes/grados/grado-ingenieria-informatica/calculo" />
+                <h1>Información general</h1>
+                <p>No hay tabla aquí</p>
+            `;
+
+            expect(() => extraerSemestre(htmlSinTabla))
+                .toThrow(ERRORES.SEMESTRE_NO_DETECTADO);
+        });
+    });
+
+
 });
