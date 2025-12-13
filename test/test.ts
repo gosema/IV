@@ -92,6 +92,11 @@ describe("Semestre - Tests", () => {
             const htmlBasura = `<table><tr><th>Semestre</th><td>jhdkhdcprimeroasbfje</td></tr></table>`;
             expect(() => extraerSemestre(htmlBasura)).toThrow(ERRORES.SEMESTRE_NO_VALIDO);
         });
+        it("Debe lanzar error si 'primero' está rodeado de texto basura (Validación Estricta)", () => {
+            // Caso: La palabra existe, pero hay "ruido" alrededor.
+            const htmlSucio = `<table><tr><th>Semestre</th><td>jhdkhdc primero asbfje</td></tr></table>`;
+            expect(() => extraerSemestre(htmlSucio)).toThrow(ERRORES.SEMESTRE_NO_VALIDO);
+        });
     });
 
 
