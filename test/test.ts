@@ -22,3 +22,15 @@ const htmlMP = leerHtmlTest(pathMP);
 
 const SEMESTRE_1 = 1;
 const SEMESTRE_2 = 2;
+
+describe("Semestre - Tests", () => {
+
+    describe("Happy Path: Con HTML real de la UGR", () => {
+
+        it("Debe detectar correctamente el semestre 1 basado en el HTML", () => {
+            const semestreDetectado = extraerSemestre(htmlCalculo);
+            expect(semestreDetectado).toBe(SEMESTRE_1);
+        });
+    });
+
+});
