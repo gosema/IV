@@ -97,6 +97,13 @@ describe("Semestre - Tests", () => {
             const htmlSucio = `<table><tr><th>Semestre</th><td>jhdkhdc primero asbfje</td></tr></table>`;
             expect(() => extraerSemestre(htmlSucio)).toThrow(ERRORES.SEMESTRE_NO_VALIDO);
         });
+        it("Debe lanzar error si aparecen ambos semestres concatenados con espacio ('Primero Segundo')", () => {
+            // Caso ambiguo: Parece que incluye ambos, por lo que no es válido.
+            const htmlAmbiguo = `<table><tr><th>Semestre</th><td>Primero Segundo</td></tr></table>`;
+
+            // Al limpiar queda "primero segundo", que no es igual a "primero" ni a "segundo".
+            expect(() => extraerSemestre(htmlAmbiguo)).toThrow(ERRORES.SEMESTRE_NO_VALIDO);
+        });
     });
 
 
