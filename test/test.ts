@@ -31,6 +31,11 @@ describe("Semestre - Tests", () => {
             const semestreDetectado = extraerSemestre(htmlCalculo);
             expect(semestreDetectado).toBe(SEMESTRE_1);
         });
+        it("Metodología Programación: Debe detectar el 2 semestre correctamente", () => {
+                    const semestreDetectado = extraerSemestre(htmlMP);
+                    expect(semestreDetectado).toBe(SEMESTRE_2);
+        });
+
     });
 
 });
