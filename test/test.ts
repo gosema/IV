@@ -55,6 +55,17 @@ describe("Semestre - Tests", () => {
             expect(() => extraerSemestre(htmlSinTabla))
                 .toThrow(ERRORES.SEMESTRE_NO_DETECTADO);
         });
+        
+        it("Debe lanzar error si el texto del semestre no es válido (ej: 'Anual')", () => {
+            // HTML con estructura correcta, pero contenido de celda no mapeado
+            const htmlSemestreInvalido = `
+                <link rel="canonical" href="https://www.ugr.es/estudiantes/grados/grado-ingenieria-informatica/calculo" />
+                <table><tr><th>Semestre</th><td>Anual</td></tr></table>
+            `;
+
+            expect(() => extraerSemestre(htmlSemestreInvalido))
+                .toThrow(ERRORES.SEMESTRE_NO_VALIDO);
+        });
     });
 
 
