@@ -15,3 +15,7 @@ function leerHtmlTest(path: string): string {
         throw new Error(`${ERRORES.ARCHIVO_NO_ENCONTRADO} -> ${path}`);
     }
 }
+
+const htmlCalculo = leerHtmlTest(pathCalculo);
+const htmlMetodos = leerHtmlTest(pathMetodos);
+const htmlMP = leerHtmlTest(pathMP);
