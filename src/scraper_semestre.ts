@@ -42,6 +42,10 @@ function parsearSemestre(texto: string): Semestre {
     //Verificamos si vacio, null o undefined y se eliminan espacios y mayusculas
     const textoLimpio = texto?.trim().toLowerCase();
 
+    if (!textoLimpio) {
+        throw new Error(ERRORES.SEMESTRE_VACIO);
+    }
+    
     if (textoLimpio === "primero") return 1;
     if (textoLimpio === "segundo") return 2;
 
