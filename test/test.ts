@@ -19,3 +19,6 @@ function leerHtmlTest(path: string): string {
 const htmlCalculo = leerHtmlTest(pathCalculo);
 const htmlMetodos = leerHtmlTest(pathMetodos);
 const htmlMP = leerHtmlTest(pathMP);
+
+const SEMESTRE_1 = 1;
+const SEMESTRE_2 = 2;
