@@ -45,8 +45,10 @@ function parsearSemestre(texto: string): Semestre {
     if (!textoLimpio) {
         throw new Error(ERRORES.SEMESTRE_VACIO);
     }
-    
+
     if (textoLimpio === "primero") return 1;
     if (textoLimpio === "segundo") return 2;
+
+    throw new Error(ERRORES.SEMESTRE_NO_VALIDO);
 
 }
