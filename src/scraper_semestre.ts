@@ -13,5 +13,5 @@ function obtenerTextoSemestreRaw(html: string): string {
     const matchSemestre = regexSemestre.exec(html);
 
     const contenido = matchSemestre[1] ? matchSemestre[1] : "";
-    return contenido.trim().toLowerCase();
+    return contenido;
 }
