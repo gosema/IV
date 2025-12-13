@@ -1,3 +1,4 @@
+import { Clase } from "./clase.ts";
 // Clase que define la entidad
 class Asignatura {
     // Ejemplo: "https://www.ugr.es/estudiantes/grados/grado-ingenieria-informatica/calculo"
