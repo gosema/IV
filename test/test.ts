@@ -104,6 +104,14 @@ describe("Semestre - Tests", () => {
             // Al limpiar queda "primero segundo", que no es igual a "primero" ni a "segundo".
             expect(() => extraerSemestre(htmlAmbiguo)).toThrow(ERRORES.SEMESTRE_NO_VALIDO);
         });
+        
+        it("Debe lanzar error si aparecen ambos semestres pegados ('PrimeroSegundo')", () => {
+            // Caso de error tipográfico o concatenación
+            const htmlPegado = `<table><tr><th>Semestre</th><td>PrimeroSegundo</td></tr></table>`;
+
+            // Al limpiar queda "primerosegundo", que tampoco coincide.
+            expect(() => extraerSemestre(htmlPegado)).toThrow(ERRORES.SEMESTRE_NO_VALIDO);
+        });
     });
 
 
