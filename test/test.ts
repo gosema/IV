@@ -35,6 +35,10 @@ describe("Semestre - Tests", () => {
                     const semestreDetectado = extraerSemestre(htmlMP);
                     expect(semestreDetectado).toBe(SEMESTRE_2);
         });
+        it("Métodos Numéricos I: Debe detectar el semestre de otro facultad distinta correctamente", () => {
+            const semestreDetectado = extraerSemestre(htmlMetodos);
+            expect(semestreDetectado).toBe(SEMESTRE_2);
+        });
 
     });
 
