@@ -82,6 +82,11 @@ describe("Semestre - Tests", () => {
             const htmlNumerico1 = `<table><tr><th>Semestre</th><td>1</td></tr></table>`;
             expect(() => extraerSemestre(htmlNumerico1)).toThrow(ERRORES.SEMESTRE_NO_VALIDO);
         });
+        it("Debe lanzar error si el texto tiene espacios intercalados anómalos (ej: 'P r i m e r o')", () => {
+            // Este caso simula un error de maquetación o un intento de obfuscación
+            const htmlEspaciado = `<table><tr><th>Semestre</th><td>P r i m e r o</td></tr></table>`;
+            expect(() => extraerSemestre(htmlEspaciado)).toThrow(ERRORES.SEMESTRE_NO_VALIDO);
+        });
     });
 
 
