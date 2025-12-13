@@ -1,0 +1,1 @@
+//archivo para funciones de scrapeado de la lógica de negocio
