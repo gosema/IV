@@ -87,6 +87,11 @@ describe("Semestre - Tests", () => {
             const htmlEspaciado = `<table><tr><th>Semestre</th><td>P r i m e r o</td></tr></table>`;
             expect(() => extraerSemestre(htmlEspaciado)).toThrow(ERRORES.SEMESTRE_NO_VALIDO);
         });
+        it("Debe lanzar error si la palabra clave está oculta/pegada a caracteres basura (ej: 'jhdkhdcprimeroasbfje')", () => {
+            // Este caso verifica que no aceptemos "falsos positivos" dentro de palabras largas sin sentido
+            const htmlBasura = `<table><tr><th>Semestre</th><td>jhdkhdcprimeroasbfje</td></tr></table>`;
+            expect(() => extraerSemestre(htmlBasura)).toThrow(ERRORES.SEMESTRE_NO_VALIDO);
+        });
     });
 
 
