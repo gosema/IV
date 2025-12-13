@@ -2,7 +2,7 @@
   "tasks": {
     "dev": "deno run --watch src/entidad.ts",
     "check": "deno check .",
-    "test": "deno test"
+    "test": "deno test --allow-read"
   },
   "lint": {
     "rules": {
