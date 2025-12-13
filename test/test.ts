@@ -55,7 +55,7 @@ describe("Semestre - Tests", () => {
             expect(() => extraerSemestre(htmlSinTabla))
                 .toThrow(ERRORES.SEMESTRE_NO_DETECTADO);
         });
-        
+
         it("Debe lanzar error si el texto del semestre no es válido (ej: 'Anual')", () => {
             // HTML con estructura correcta, pero contenido de celda no mapeado
             const htmlSemestreInvalido = `
@@ -65,6 +65,16 @@ describe("Semestre - Tests", () => {
 
             expect(() => extraerSemestre(htmlSemestreInvalido))
                 .toThrow(ERRORES.SEMESTRE_NO_VALIDO);
+        });
+        
+        it("Debe lanzar error específico si la celda del semestre está vacía", () => {
+            // HTML con estructura correcta, pero contenido vacio de semestre
+            const htmlVacio = `
+                <table><tr><th>Semestre</th><td>   </td></tr></table>
+            `;
+
+            expect(() => extraerSemestre(htmlVacio))
+                .toThrow(ERRORES.SEMESTRE_VACIO);
         });
     });
 
