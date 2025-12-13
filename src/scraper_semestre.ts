@@ -26,7 +26,9 @@ export function extraerSemestre(html: string): Semestre {
 function obtenerTextoSemestreRaw(html: string): string {
     const regexSemestre = /Semestre<\/th>[^]*?<td>\s*([\s\S]*?)\s*<\/td>/i;
     const matchSemestre = regexSemestre.exec(html);
-
+    if (!matchSemestre) {
+        throw new Error(ERRORES.SEMESTRE_NO_DETECTADO);
+    }
     const contenido = matchSemestre[1] ? matchSemestre[1] : "";
     return contenido;
 }
