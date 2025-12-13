@@ -2,7 +2,7 @@
 type Semestre= 1|2;
 type DiaLectivo= 'L' | 'M' | 'X' | 'J' | 'V';
 
-export class Clase {
+class Clase {
     grupo: string;
     dia: DiaLectivo;
     semestre: Semestre;
