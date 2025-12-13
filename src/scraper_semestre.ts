@@ -1,4 +1,6 @@
 //archivo para funciones de scrapeado de la lógica de negocio
+import { ERRORES } from "./errores.ts";
+import { Semestre } from "./clase.ts";
 
 /**
      * Responsabilidad: Búsqueda en el HTML (Scraping puro).
