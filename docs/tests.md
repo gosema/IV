@@ -68,5 +68,10 @@ Es el comando que se escribe en la terminal para que se ejecuten todos los archi
 
 El criterio tomado es la **integración**, se da prioridad a soluciones que requieran un mínimo de configuración y herramientas externas, alineándose así con la filosofía de Deno.
 
-Para este apartado no existe debate viable: la elección es la herramienta nativa [deno test](https://docs.deno.com/runtime/fundamentals/testing/).
-Aplicando el criterio de integración, cualquier opción externa (como [Vitest](https://vitest.dev/)) queda descartada automáticamente porque viola el principio fundamental de nuestra elección tecnológica de reducir la deuda técnica. Ignorar el runner nativo para configurar una herramienta externa añadiría complejidad innecesaria.
+-[Deno test](https://docs.deno.com/runtime/fundamentals/testing/): Su integración es absoluta y nativa. Al venir incluido en el runtime, no requiere instalación de paquetes.
+
+-[Vitest](https://vitest.dev/): Requiere inicializar el proyecto con dependencias externas y crear un archivo de configuración vitest.
+
+-[Jest](https://jestjs.io/): requiere instalar múltiples dependencias y configurar el entorno del proyecto.
+
+Aplicando el criterio de integración, cualquier opción externa queda descartada automáticamente porque viola el principio fundamental de nuestra elección tecnológica de reducir la deuda técnica. Ignorar el runner nativo para configurar una herramienta externa añadiría complejidad innecesaria. Por tanto se elige para este proyecto Deno test.
