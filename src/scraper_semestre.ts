@@ -2,8 +2,6 @@
 import { ERRORES } from "./errores.ts";
 import { Semestre } from "./clase.ts";
 
-
-
 /**
      * Coordina la extracción y validación del semestre.
 */
@@ -29,8 +27,7 @@ function obtenerTextoSemestreRaw(html: string): string {
     if (!matchSemestre) {
         throw new Error(ERRORES.SEMESTRE_NO_DETECTADO);
     }
-    const contenido = matchSemestre[1] ? matchSemestre[1] : "";
-    return contenido;
+    return matchSemestre[1];
 }
 
 /**
