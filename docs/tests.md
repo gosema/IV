@@ -26,7 +26,7 @@ Su estilo es imperativo centrado en el estado interno del código
 
 - [Opción nativa de Deno BDD (std/expect)](http://docs.deno.com/runtime/reference/std/expect/):
 Es otra biblioteca oficial de Deno diseñada para el Behaviour-Driven Development.
-Integridad máxima y no requiere nada externo.
+Integración máxima y no requiere nada externo.
 Su estilo declarativo se centra en describir una especificación del comportamiento del sistema
 
 - [Chai](https://www.chaijs.com/): 
@@ -45,22 +45,26 @@ Los criterios a estudiar serán los siguientes:
 - **Integración**: se da prioridad a soluciones que requieran un mínimo de configuración y herramientas externas, alineándose así con la filosofía de Deno.
 - **Estilo**: Se busca un código declarativo, se prioriza una estructura que permita agrupar y describir funcionalidades (metodología BDD) en lugar de una lista plana de ejecuciones imperativas.
 
-Se nos presentan estas tres alternativas:
+Se nos presentan estas cinco alternativas:
+
+- [Jasmine](https://jasmine.github.io/): pionero del estilo BDD y definió la sintaxis semántica (describe, it, expect) que posteriormente adoptaron Mocha, Jest y el propio Deno. Respecto a la integración, presenta los mismos problemas que opciones externas ya que fue diseñado para el ecosistema Node por lo que implica dependencias.
+
+- [Mocha](https://mochajs.org/)
+Para el criterio de integración no es fácil su integración al proyecto ya que añade demasiadas herramientas externas
+Ofrece un estilo similar al de Jasmine, es declarativo, consolidándolo y estandarizando la sintaxis BDD que usan casi todos los frameworks.
+
+- [Jest](https://jestjs.io/):
+Es el estándar actual de Node y funciona como solución todo en uno. Sobre su integración en Deno requiere de configuración y dependencias de Node. Sobre su estilo es declarativo siguiendo el estándar BDD heredado de Jasmine y Mocha.
 
 - [Opción nativa de Deno](https://docs.deno.com/runtime/fundamentals/testing/): 
-Sobre su integridad, no se necesita importar nada para definir un test, ya que Deno.test es una global del runtime.
+Sobre su integración, no se necesita importar nada para definir un test, ya que Deno.test es una global del runtime.
 Es un estilo imperativo que tiende a crear listas largas de tests sin anidación jerárquica clara.
 
 - [Opción nativa de Deno-BDD](https://jsr.io/@std/testing/doc): 
-En cuanto a su integridad es parte de la biblioteca estándar de Deno. Requiere importar funciones básicas pero no añade dependencias de terceros.
+En cuanto a su integración es parte de la biblioteca estándar de Deno. Requiere importar funciones básicas pero no añade dependencias de terceros.
 Su estilo es declarativo centrado en BDD permite una estructura jerárquica.
 
-- [Mocha](https://mochajs.org/)
-Para el criterio de integridad no es fácil su integración al proyecto ya que añade demasiadas herramientas externas
-Ofrece un estilo muy similar a Deno BDD, es declarativo.
-
-El debate se centra entre las dos opciones nativas de Deno, ya que Mocha queda descartado por incumplir el criterio de Integración: que genera una deuda técnica innecesaria para obtener una sintaxis que Deno ya ofrece de forma nativa.
-Entre las opciones nativas, se elige Deno BDD (std/testing/bdd) basándose en el criterio de estilo. Aunque requiere una importación, aporta la estructura semántica y jerárquica necesaria para un desarrollo guiado por comportamiento.
+Es fundamental reconocer e impacto de Mocha, Jest o Jasmine en el ecosistema de JavaScript ya que han establecido el estándar para las pruebas unitarias, definiendo la sintaxis semántica (describe, it, beforeEach). El debate final se centra por tanto en como obtener esa sintaxis estándar con el menor coste de integración. Entre las dos opciones nativas de Deno, se elige Deno BDD (std/testing/bdd) basándose en el criterio de estilo. Aunque requiere una importación, aporta la estructura semántica y jerárquica necesaria para un desarrollo guiado por comportamiento.
 
 ## Herramientas CLI
 
@@ -72,6 +76,6 @@ El criterio tomado es la **integración**, se da prioridad a soluciones que requ
 
 -[Vitest](https://vitest.dev/): Requiere inicializar el proyecto con dependencias externas y crear un archivo de configuración vitest.
 
--[Jest](https://jestjs.io/): requiere instalar múltiples dependencias y configurar el entorno del proyecto.
+-[Jest](https://jestjs.io/): funciona como herramienta todo en uno, requiere instalar múltiples dependencias y configurar el entorno del proyecto.
 
 Aplicando el criterio de integración, cualquier opción externa queda descartada automáticamente porque viola el principio fundamental de nuestra elección tecnológica de reducir la deuda técnica. Ignorar el runner nativo para configurar una herramienta externa añadiría complejidad innecesaria. Por tanto se elige para este proyecto Deno test.
