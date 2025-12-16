@@ -22,7 +22,17 @@ export function extraerSemestre(html: string): Semestre {
      * ignorando espacios en blanco alrededor o saltos de línea.
 */
 function obtenerTextoSemestreRaw(html: string): string {
-    const regexSemestre = /Semestre<\/th>[^]*?<td>\s*([\s\S]*?)\s*<\/td>/i;
+    const patron =
+        "Semestre</th>" +   // 1.Busca el texto 'Semestre' y el cierre de su etiqueta
+        "\\s*" +            // 2.Salta cualquier espacio o salto de línea 
+        "<td>" +            // 3.Encuentra la celda de datos
+        "\\s*" +            // 4.Ignora espacios vacíos al inicio de la celda
+        "([\\s\\S]*?)" +    // 5.[\s\S] recoge todo el contenido 
+        "\\s*" +            // 6.Ignora espacios al final
+        "</td>";            // 7.Cierre de la celda
+
+    // Creamos la RegExp con el string y la flag 'i' para mayúsuclas y minúsculas
+    const regexSemestre = new RegExp(patron, "i");
     const matchSemestre = regexSemestre.exec(html);
     if (!matchSemestre) {
         throw new Error(ERRORES.SEMESTRE_NO_DETECTADO);
