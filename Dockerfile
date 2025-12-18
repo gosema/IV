@@ -10,6 +10,9 @@ WORKDIR /app
 COPY deno.json .
 COPY src ./src
 
+# Copia la carpeta de datos para que los tests la encuentren en /app/data
+COPY data ./data
+
 # Redirige la caché de Deno
 # Como el usuario 1001 no puede escribir en /app/test, le decimos a Deno
 # que guarde su caché y compilaciones en /tmp, donde sí tiene permisos.
