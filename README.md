@@ -25,6 +25,10 @@ También se ha tomado la elección de escoger entre varios gestores.
 - El gestor de dependencias escogido ha sido el incluido en Deno. [Justificación](docs/dependencias.md)
 - El gestor de tareas elegido ha sido Deno task. [Justificación](docs/tareas.md)
 
+### Tests
+
+Para la elección de herramientas de automatización de test se ha tomado la decisión de utlizar las herramientas nativas de Deno en base a lo debatido en [Justificación](docs/tests.md).
+
 ### Comandos básicos
 
   deno run main.tsm -> ejecuta el programa
@@ -32,9 +36,8 @@ También se ha tomado la elección de escoger entre varios gestores.
   deno test -> ejecuta los test del proyecto (archivo_test.ts)
   deno lint -> revisa el código fuente sin ejecutar en busca de posibles errores
   deno task check -> comprueba la sintaxis y los tipos de los archivos
+  deno task test -> lanza los tests
 
-Para facilitar al usuario utilizar el proyecto se ha creado el siguiente archivo a modo de tutorial algunos parámetros interesantes de deno .json.
-[Tutorial](/docs/tutorial_denojson.md)
 ### Elección del lenguaje.
 Para el proyecto hemos acordado usar TypeScript como puede observarese en la [issue #7](https://github.com/gosema/IV/issues/7). Es una buena elección porque proporciona un sistema de tipos estático que mejora la robustez del código frente a JS, facilita el mantenimiento a largo plazo y permite estructurar proyectos de manera más clara y escalable.
 
