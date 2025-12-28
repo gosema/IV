@@ -13,3 +13,6 @@ RUN deno cache deno.json || true
 
 # Cambiamos permisos de la caché para el usuario 1001
 RUN chown -R denouser:denogroup /deno-dir
+
+# Preparamos el directorio de trabajo para los tests
+WORKDIR /app/test
