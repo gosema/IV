@@ -10,11 +10,11 @@ Los criterios impuestos para determinar la imagen más conveniente para el proye
 
 - **Ligereza y eficiencia**: la imagen debe incluir únicamente los componentes esenciales para garantizar un funcionamiento correcto, reduciendo así su tamaño y el tiempo de construcción. Aunque una imagen ligera no siempre implica un despliegue más rápido, se prioriza igualmente que su rendimiento sea óptimo. Para ello se ha llevado a cabo un benchmark comparativo utilizando la herramienta Hyperfine.
 
-- **Seguridad**: no presentar vulnerabilidades relevantes, garantizando así un entorno de pruebas fiable y seguro. Comprobado mediante la herramienta de snyk.
+- **Seguridad**: no presentar vulnerabilidades relevantes, garantizando así un entorno de pruebas fiable y seguro. Comprobado mediante la herramienta de Snyk.
 
 ## Análisis de ejecución de tests en contenedores Deno
 
-Para ejecutar los tests en los distintos contenedores se ha realizado una configuración estandarizada de prueba con un usuario no-root con permisos limitados, una copia de archivos de configuración (deno.json, deno.lock) durante la construcción para ejecutar deno cache y usando volumenes de Docker para el código fuente y los datos y un entrypoint para ejecutar deno task test.
+Para ejecutar los tests en los distintos contenedores se ha realizado una configuración estandarizada de prueba con un usuario no-root con permisos limitados, una copia de archivos de configuración (deno.json y deno.lock) durante la construcción para ejecutar deno cache y usando volumenes de Docker para el código fuente y los datos y un entrypoint para ejecutar deno task test.
 
 ## Comparación objetiva con los criterios
 
