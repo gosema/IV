@@ -4,3 +4,6 @@ FROM denoland/deno:alpine
 RUN addgroup -S denogroup && adduser -S denouser -u 1001 -G denogroup
 
 WORKDIR /app
+
+# Copiamos archivos de configuración
+COPY deno.json* deno.lock* ./
