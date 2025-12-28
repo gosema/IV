@@ -7,3 +7,6 @@ WORKDIR /app
 
 # Copiamos archivos de configuración
 COPY deno.json* deno.lock* ./
+
+# Instalamos dependencias como root para la caché
+RUN deno cache deno.json || true
