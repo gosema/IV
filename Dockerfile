@@ -18,3 +18,4 @@ RUN chown -R denouser:denogroup /deno-dir
 WORKDIR /app/test
 
 USER denouser
+ENTRYPOINT ["deno", "task", "test"]
