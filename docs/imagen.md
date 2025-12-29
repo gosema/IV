@@ -6,7 +6,7 @@ Una imagen Docker es un paquete reproducible que contiene el entorno necesario p
 
 Los criterios impuestos para determinar la imagen más conveniente para el proyecto serán los siguientes:
 
-- **Incorporación de Deno**: es el criterio principal, se requiere que la imagen disponga de Deno preinstalado con el fin de evitar dependencias innecesarias y reducir la aparición de deuda técnica.
+- **Incorporación de Deno**: es el criterio principal,Se opta por una imagen que ya incluya el entorno de ejecución (Runtime) de Deno. Esto garantiza que el binario de Deno ha sido compilado y optimizado específicamente para ese Sistema Operativo, asegurando la reproducibilidad de los tests en cualquier entorno de CI/CD sin depender de scripts de instalación externos
 
 - **Ligereza y eficiencia**: la imagen debe incluir únicamente los componentes esenciales para garantizar un funcionamiento correcto, reduciendo así su tamaño y el tiempo de construcción. Aunque una imagen ligera no siempre implica un despliegue más rápido, se prioriza igualmente que su rendimiento sea óptimo. Para ello se ha llevado a cabo un benchmark comparativo utilizando la herramienta Hyperfine.
 
