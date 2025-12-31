@@ -20,5 +20,5 @@ RUN chmod -R 777 /deno-dir
 # Preparamos el directorio de trabajo para los tests
 WORKDIR /app/test
 
-
+USER denouser
 ENTRYPOINT ["deno", "task", "test"]
