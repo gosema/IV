@@ -9,7 +9,7 @@ WORKDIR /app
 COPY --chown=denouser:denogroup deno.json deno.lock ./
 
 # Instalamos dependencias como root para la caché
-
+USER denouser
 ENV DENO_DIR=/deno-dir
 RUN deno cache deno.json || true
 
