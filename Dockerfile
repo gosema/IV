@@ -15,7 +15,7 @@ RUN deno cache deno.json || true
 
 # Los usuarios pueden usar la caché pre-instalada
 USER root
-RUN chmod -R 777 /deno-dir
+RUN chmod -R 1777 /deno-dir
 
 # Preparamos el directorio de trabajo para los tests
 WORKDIR /app/test
