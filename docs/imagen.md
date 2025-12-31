@@ -23,17 +23,17 @@ Imagenes oficiales de Deno a considerar, [enlace a las imagenes docker](https://
 - [denoland/deno:alpine](https://github.com/denoland/deno_docker/blob/main/alpine.dockerfile).
     - Sobre su seguridad, en el análisis con [snyk](snyk_alpine.png) no se encontró ninguna vulnerabilidad.
     - Respecto al tamaño, el peso de la imagen final es de 182.98 MB
-    - En los [benchmarks](benchmark_completo.md) se ha obtenido una media de 790.2 s.
+    - En los [benchmarks](benchmark_completo.md) se ha obtenido una media de 790.2 ms.
 
 - [denoland/deno:debian](https://github.com/denoland/deno_docker/blob/main/debian.dockerfile)
     - Sobre su seguridad, en el análisis con [snyk](snyk_debian.png) se encontraron 23 vulnerabilidades.
     - Respecto al tamaño, el peso de la imagen final es de 280.29 MB
-    - En los [benchmarks](benchmark_completo.md) se ha obtenido una media de 735.0 s.
+    - En los [benchmarks](benchmark_completo.md) se ha obtenido una media de 735.0 ms.
 
 - [denoland/deno:ubuntu](https://github.com/denoland/deno_docker/blob/main/ubuntu.dockerfile)
     - Sobre su seguridad, en el análisis con [snyk](snyk_ubuntu.png) se encontraron 16 vulnerabilidades.
     - Respecto al tamaño, el peso de la imagen final es de 281.43 MB
-    - En los [benchmarks](benchmark_completo.md) se ha obtenido una media de 566.0 s.
+    - En los [benchmarks](benchmark_completo.md) se ha obtenido una media de 566.0 ms.
 
 Imagenes base a considerar:
 
@@ -50,15 +50,16 @@ Imagenes base a considerar:
 - [Alpine](https://hub.docker.com/_/alpine).
     - Sobre su seguridad, en el análisis con [snyk](snyk_pure_alpine.png) no se encontró ninguna vulnerabilidad.
     - Respecto al tamaño, el peso de la imagen final es de 164.46 MB
-    - En los [benchmarks](benchmark_completo.md) se ha obtenido una media de 858.0 s.
+    - En los [benchmarks](benchmark_completo.md) se ha obtenido una media de 858.0 ms.
 
 Imagenes de terceros a considerar:
 
 - [Tundra soft deno](https://hub.docker.com/r/tundrasoft/deno).
     - Sobre su seguridad, en el análisis con [snyk](snyk_tundra.png) no se encontró ninguna vulnerabilidad.
     - Respecto al tamaño, el peso de la imagen final es de 208.53 MB
-    - En los [benchmarks](benchmark_completo.md) se ha obtenido una media de 728.8 s.
+    - En los [benchmarks](benchmark_completo.md) se ha obtenido una media de 728.8 ms.
 
 ## Conclusión
 
-Tras analizar todas las opciones en base a los criterios objetivos planteados, se ha llegado a la conclusión de elegir [denoland/deno:alpine](https://github.com/denoland/deno_docker/blob/main/alpine.dockerfile) ya que cumple uno de los criterios clave que es la incorporación de Deno en la imagen (opciones de iamgenes puras como alpine, debian y ubuntu no lo tienen). Además destaca por sus escasas vulnerabilidades siendo la opción más segura junto a la imagen base de alpine y tundra. También requiere de muy poco tamaño la imagen siendo la más ligera junto con la imagen pura de alpine. Finalmente, ofrece una velocidad aceptable en los test y aunque con respecto a las imagenes puras tarde un segundo más,sigue siendo la opción más adecuada por incluir Deno, su tamaño y seguridad.
+Tras analizar todas las opciones en base a los criterios objetivos planteados, se ha llegado a la conclusión de elegir [denoland/deno:alpine](https://github.com/denoland/deno_docker/blob/main/alpine.dockerfile). Destaca frente al resto de las imagenes por tener 0 vulnerabilidades en el análisis que se ha hecho (al igual que la imagen base de alpine y deno tundra). Además, tiene una buena velocidad de ejecución de los tests (790.2 ms), solo siendo superado por deno tundra y por deno ubuntu (566 ms) y deno debian (735 ms) que quedaban descartadas antes por poseer muchas vulnerabilidades. Deno alpine vuelve a destacar en la ligereza donde supera a todas las imagenes (182.98 MB) excepto a la imagen base de alpine (164.46 MB) que quedaba descartada por empeorar en eficiencia.
+Por tanto, se ha elgido deno:alpine por cumplir de forma estable con todos los criterios, destacando en todos.   
