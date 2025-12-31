@@ -8,10 +8,10 @@ WORKDIR /app
 # Copiamos archivos de configuración
 COPY --chown=denouser:denogroup deno.json deno.lock ./
 
-# Instalamos dependencias como root para la caché y especificamos el directorio de caché
 USER denouser
 ENV DENO_DIR=/deno-dir
-RUN deno cache deno.json || true
+# Instalamos dependencias como root para la caché y especificamos el directorio de caché
+RUN deno cache deno.json || true 
 
 # Los usuarios pueden usar la caché pre-instalada
 USER root
@@ -20,5 +20,7 @@ RUN chmod -R 777 /deno-dir
 # Preparamos el directorio de trabajo para los tests
 WORKDIR /app/test
 
+
+# Cambiamos a usuario no root para ejecutar los tests
 USER denouser
-ENTRYPOINT ["deno", "task", "test"]
+ENTRYPOINT ["deno", "task", "test"] 
