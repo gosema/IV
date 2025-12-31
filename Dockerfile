@@ -1,7 +1,7 @@
 FROM denoland/deno:alpine
 
 # Creamos usuario y grupo dinámicos (Sin UID fijo para ser flexible)
-RUN addgroup -S denogroup && adduser -S denouser -G denogroup
+RUN addgroup -S denogroup && adduser -S denouser -G denogroup 
 
 WORKDIR /app
 
