@@ -3,9 +3,10 @@ FROM denoland/deno:alpine
 WORKDIR /app
 
 # Copiamos archivos de configuración
-COPY deno.json deno.lock ./
+COPY --chown=denouser:denogroup deno.json deno.lock ./
 
 # Instalamos dependencias como root para la caché
+ENV DENO_DIR=/deno-dir
 RUN deno cache deno.json || true
 
 # Los usuarios pueden usar la caché pre-instalada
