@@ -18,7 +18,7 @@ RUN deno cache deno.json && rm deno.json deno.lock || true
 USER root
 # Permisos 777 de escritura para que los usuarios puedan escribir en el directorio de caché
 # Permisos de 1 para que un usuario ajeno no pueda borrar los archivos de caché creados en la imagen
-RUN chmod -R 1777 /deno-dir
+RUN chmod -R 1777 /deno-dir  
 
 # Preparamos el directorio de trabajo para los tests
 WORKDIR /app/test
