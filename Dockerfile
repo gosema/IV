@@ -15,6 +15,10 @@ RUN deno cache deno.json
 
 # Los usuarios pueden usar la caché pre-instalada
 USER root
+
+# Borramos con root los archivos de configuración una vez que se ha generado la caché, evitando redundancia.
+RUN rm /app/deno.json /app/deno.lock
+
 # Permisos 777 de escritura para que los usuarios puedan escribir en el directorio de caché
 # Permisos de 1 para que un usuario ajeno no pueda borrar los archivos de caché creados en la imagen
 RUN chmod -R 1777 /deno-dir  
