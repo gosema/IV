@@ -11,7 +11,7 @@ COPY --chown=denouser:denogroup deno.json deno.lock ./
 USER denouser
 ENV DENO_DIR=/deno-dir
 # Instalamos dependencias como root para la caché y especificamos el directorio de caché.
-# Además borramos los archivos de configuración
+# Además borramos los archivos de configuración una vez que se ha generado la caché, evitando redundancia.
 RUN deno cache deno.json && rm deno.json deno.lock || true 
 
 # Los usuarios pueden usar la caché pre-instalada
