@@ -41,3 +41,15 @@ Para la elección de herramientas de automatización de test se ha tomado la dec
 ### Elección del lenguaje.
 Para el proyecto hemos acordado usar TypeScript como puede observarese en la [issue #7](https://github.com/gosema/IV/issues/7). Es una buena elección porque proporciona un sistema de tipos estático que mejora la robustez del código frente a JS, facilita el mantenimiento a largo plazo y permite estructurar proyectos de manera más clara y escalable.
 
+### Ejecución de tests con Docker
+
+La imagen base que se ha elegido ha sido la oficial de Deno con alpine, esto se ha justficado en el siguiente [documento](docs/imagen.md).
+Para poder ejecutar los tests con Docker se debe ejecutar el siguiente comando:
+```bash
+ docker run -u 1001 -t -v `pwd`:/app/test gosema/objetivo-5
+ ```
+o en mi caso en Windows:
+```bash
+ docker run -u 1001 -t -v ${PWD}:/app/test gosema/objetivo-5
+ ```
+.
